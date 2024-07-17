@@ -1,5 +1,6 @@
 import random
 from PIL import Image
+import time
 
 # Set the size of the image
 width = 1000
@@ -27,4 +28,4 @@ for i in range(width):
         pixels[i, j] = color
 
 # Save the image to a file
-image.save('gradient.png')
+image.save(f'gradient_{str(time.time()).replace(".", "")}.png')
